@@ -1,4 +1,4 @@
-import App from './index';
+import index from './index';
 
-App.listen(process.env.PORT || 3333);
+index.listen(process.env.PORT || 3333);
 
