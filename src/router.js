@@ -2,6 +2,7 @@ import { Router } from 'express';
 import ProdutosController from './controllers/ProdutosController';
 import QueryesController from './controllers/QueryesController';
 import QueryCategory from './controllers/QueryCategory';
+import Querycoritem from './controllers/Querycoritem';
 
 const routes = new Router();
 
@@ -18,5 +19,7 @@ routes.get('/produto', QueryesController.getproduto)
 
 
 //mateus - category
-routes.get('/categoria', QueryCategory.getCategoryProduct )
-export default routes;  
+routes.get('/categoria', QueryCategory.getCategoryProduct)
+export default routes;
+
+routes.get('/produtos/cor', Querycoritem.getmodelo)

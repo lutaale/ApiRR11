@@ -1,5 +1,5 @@
 import Produtos from "../schemas/Produtos";
-window.screen.width
+
 class ProdutoController {
 
     async index(req, res) {
@@ -18,22 +18,36 @@ class ProdutoController {
 
 
     async store(req, res) {
-        const { produto, preco, categoria, cor, descricao, imgurl, tamanho } = req.body;
+        const { produto, modelo, preco, categoria, cor, cor2, cor3, cor4, descricao, imgurl, imgurl2, imgurl3, imgurl4, imgurl5, imgurl6, imgurl7, imgurl8, tamanho, tamanho2, tamanho3, tamanho4 } = req.body;
 
 
         const Produtolist = await Produtos.create({
             produto,
+            modelo,
             preco,
             cor,
+            cor2,
+            cor3,
+            cor4,
             descricao,
             categoria,
             imgurl,
-            tamanho
+            imgurl2,
+            imgurl3,
+            imgurl4,
+            imgurl5,
+            imgurl6,
+            imgurl7,
+            imgurl8,
+            tamanho,
+            tamanho2,
+            tamanho3,
+            tamanho4
         });
 
         return res.json(Produtolist);
     }
-win
+
     async delete(req, res) {
         const { _id } = req.params
         const Produtolist = await Produtos.deleteOne({ _id: _id })
@@ -41,15 +55,30 @@ win
     }
 
     async update(req, res) {
-        const { produto, preco, categoria, cor, descricao, imgurl, tamanho } = req.body;
+        const { produto, modelo,marca, preco, categoria, cor, cor2, cor3, cor4, descricao, imgurl, imgurl2, imgurl3, imgurl4, imgurl5, imgurl6, imgurl7, imgurl8, tamanho, tamanho2, tamanho3, tamanho4 } = req.body;
         const Produtolist = await Produtos.updateOne({
             produto,
+            modelo,
+            marca,
             preco,
             cor,
+            cor2,
+            cor3,
+            cor4,
             descricao,
             categoria,
             imgurl,
-            tamanho
+            imgurl2,
+            imgurl3,
+            imgurl4,
+            imgurl5,
+            imgurl6,
+            imgurl7,
+            imgurl8,
+            tamanho,
+            tamanho2,
+            tamanho3,
+            tamanho4
         })
         return res.json(Produtolist)
 

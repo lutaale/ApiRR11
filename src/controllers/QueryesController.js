@@ -6,7 +6,7 @@ class Querycontroller {
     async getproduto(req, res) {
         const { produto } = req.query;
 
-        const Produtolist = await Produtos.findOne({ produto: produto })
+        const Produtolist = await Produtos.find({ produto: produto })
         
         return res.json(Produtolist)
     }
