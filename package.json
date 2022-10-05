@@ -5,7 +5,7 @@
     "mongoose": "^6.6.2",
     "nodemon": "^2.0.20",
     "sucrase": "^3.27.0",
-    "node": "18.x",
+    "node": "16.x",
     "npm": "8.3.1"
   },
   "keywords": [
